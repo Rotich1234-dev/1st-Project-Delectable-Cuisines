@@ -98,9 +98,15 @@ document.addEventListener("DOMContentLoaded", function(){
         const orderConfirmation = menuItemDiv.querySelector(".orderConfirmation");
         orderConfirmation.textContent = `Order placed for ${itemName}`;
         
-        // Set the font color (optional)
-        orderConfirmation.style.color = "green"; // Change "green" to your desired color
+        // color of confirmation message
+        orderConfirmation.style.color = "green"; 
     }
-
-
-})
+    // cancel order message
+    function cancelOrder(menuItemDiv, itemName) {
+        const orderConfirmation = menuItemDiv.querySelector(".orderConfirmation");
+        orderConfirmation.textContent = `Order for ${itemName} has been canceled!!`;
+        
+        
+        orderConfirmation.style.color = "red"; 
+    }
+});
