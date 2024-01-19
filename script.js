@@ -45,6 +45,19 @@ document.addEventListener("DOMContentLoaded", function(){
             alert(`Liked ${item.title}`);
             menuItemDiv.classList.add("liked");
         });
+        menuItemDiv.appendChild(likeButton);
+// Add a "Comment" button with event listener
+        const commentButton = document.createElement("button");
+        commentButton.classList.add("commentButton");
+        commentButton.textContent = "Comment";
+        commentButton.addEventListener("click", () => {
+            const comment = prompt("Add a comment:");
+            if (comment) {
+                displayComment(menuItemDiv, comment);
+            }
+        });
+        menuItemDiv.appendChild(commentButton);
+
     }
 
 
