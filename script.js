@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", function(){
     Promise.all([fetch(apiUrl1), fetch(apiUrl2)])
     .then(responses => Promise.all(responses.map(response => response.json())))
     .then(dataArray => {
+        // Get the container where menu items will be displayed
         const menuContainer = document.getElementById("menu");
+        // Iterate through the data and create menu items dynamically
 
         dataArray.forEach(data => {
             data.menuItems.forEach(item => {
@@ -23,6 +25,27 @@ document.addEventListener("DOMContentLoaded", function(){
         });
     })
     .catch(error => console.error("Error fetching menu items:", error));
+    // Create a div for the menu item
+    function createMenuItems(item){
+        const menuItemDiv = document.createElement("div");
+        menuItemDiv.classList.add("menuItem");
+        
+        const img = document.createElement("img");
+        img.src = item.image;
+        menuItemDiv.appendChild(img);
+
+        const name = document.createElement("h3");
+        name.textContent = item.title;
+        menuItemDiv.appendChild(name);
+// Add a "Like" button with event listener
+        const likeButton = document.createElement("button");
+        likeButton.classList.add("likeButton");
+        likeButton.textContent = "Like";
+        likeButton.addEventListener("click", () => {
+            alert(`Liked ${item.title}`);
+            menuItemDiv.classList.add("liked");
+        });
+    }
 
 
 })
