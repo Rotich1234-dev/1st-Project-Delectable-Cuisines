@@ -85,13 +85,21 @@ document.addEventListener("DOMContentLoaded", function(){
 
         return menuItemDiv;
     }
-    // display comment
+    // display comment made on menu item
     function displayComment(menuItemDiv, comment) {
         const commentsSection = menuItemDiv.querySelector(".comments");
         const commentDiv = document.createElement("div");
         commentDiv.classList.add("comment");
         commentDiv.textContent = comment;
         commentsSection.appendChild(commentDiv);
+    }
+    // display order confirmation message
+    function displayOrderConfirmation(menuItemDiv, itemName) {
+        const orderConfirmation = menuItemDiv.querySelector(".orderConfirmation");
+        orderConfirmation.textContent = `Order placed for ${itemName}`;
+        
+        // Set the font color (optional)
+        orderConfirmation.style.color = "green"; // Change "green" to your desired color
     }
 
 
