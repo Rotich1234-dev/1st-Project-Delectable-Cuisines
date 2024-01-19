@@ -57,6 +57,15 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         });
         menuItemDiv.appendChild(commentButton);
+        
+// order button
+        const orderButton = document.createElement("button");
+        orderButton.classList.add("orderButton");
+        orderButton.textContent = "Order";
+        orderButton.addEventListener("click", () => {
+            displayOrderConfirmation(menuItemDiv, item.title);
+        });
+        menuItemDiv.appendChild(orderButton);
 
     }
 
