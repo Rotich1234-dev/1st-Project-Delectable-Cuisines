@@ -78,7 +78,20 @@ document.addEventListener("DOMContentLoaded", function(){
         const commentsSection = document.createElement("div");
         commentsSection.classList.add("comments");
         menuItemDiv.appendChild(commentsSection);
+// show confirmation message for order placed
+        const orderConfirmation = document.createElement("p");
+        orderConfirmation.classList.add("orderConfirmation");
+        menuItemDiv.appendChild(orderConfirmation);
 
+        return menuItemDiv;
+    }
+    // display comment
+    function displayComment(menuItemDiv, comment) {
+        const commentsSection = menuItemDiv.querySelector(".comments");
+        const commentDiv = document.createElement("div");
+        commentDiv.classList.add("comment");
+        commentDiv.textContent = comment;
+        commentsSection.appendChild(commentDiv);
     }
 
 
