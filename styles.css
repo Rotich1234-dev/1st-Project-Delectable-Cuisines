@@ -1,0 +1,39 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: aliceblue;
+    color: black;
+    font-size: 18px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    list-style: disc;
+    text-align: left;
+    font-weight: 800;
+    background-image: url('https://files.123freevectors.com/wp-content/original/202648-plain-light-color-background.jpg');
+}
+.header{
+    text-align: center;
+}
+.navbar{
+    color: rgb(19, 78, 7);
+    padding: 10px;
+    flex-direction: column;
+
+}
+.container{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin-left: 5%;
+}
+.navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 20px;
+}
+.navbar a:hover {
+    background-color: blueviolet;
+    color: black;
+}
