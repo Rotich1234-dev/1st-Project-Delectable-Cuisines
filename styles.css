@@ -1,11 +1,13 @@
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: 'Times New Roman', Times, serif;
-    background-color: aliceblue;
     color: black;
     font-size: 18px;
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     line-height: 1.6;
     list-style: disc;
     text-align: left;
@@ -16,17 +18,28 @@ body{
     padding: 0;
     margin: 0;
     text-align: center;
-    color: red;
     text-transform: capitalize;
+}
+header{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeCWMvuq1rDLBWySivKJp4bgE7EwimTOaS_A&usqp=CAU');
 }
 .header h1 {
     font-size: 28px;
     font-family: 'Times New Roman', Times, serif;
 }
+.info{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
 .navbar{
-    color: rgb(19, 78, 7);
-    padding: 10px;
-    flex-direction: column;
+    padding: 0px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    z-index: 9;
 
 }
 .container{
@@ -40,6 +53,9 @@ body{
     display: block;
     text-align: center;
     padding: 14px 20px;
+}
+.navbar a.right {
+    float: right;
 }
 .navbar a:hover {
     background-color: blueviolet;
@@ -138,7 +154,6 @@ body{
     cursor: pointer;
     backdrop-filter: blur(0.5rem);
     background-color: crimson; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added a subtle box shadow for better visibility */
 }
 .reviewer-info{
     display: flex;
@@ -179,12 +194,6 @@ body{
     overflow: hidden;
 }
 
-#menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
 .menuItem {
     width: 30%;
     margin: 1em;
@@ -198,7 +207,7 @@ body{
 .menuItem img {
     width: 100%;
     border-radius: 5px;
-    margin-bottom: 0.5em;
+    /* margin-bottom: ; */
 }
 
 .likeButton,
