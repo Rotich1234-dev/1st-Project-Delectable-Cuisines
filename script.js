@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         });
         menuItemDiv.appendChild(commentButton);
-        
+
 // order button
         const orderButton = document.createElement("button");
         orderButton.classList.add("orderButton");
@@ -66,6 +66,18 @@ document.addEventListener("DOMContentLoaded", function(){
             displayOrderConfirmation(menuItemDiv, item.title);
         });
         menuItemDiv.appendChild(orderButton);
+// button to allow cancelling an order placed
+        const cancelOrderButton = document.createElement("button");
+        cancelOrderButton.classList.add("cancelOrderButton");
+        cancelOrderButton.textContent = "Cancel Order";
+        cancelOrderButton.addEventListener("click", () => {
+            cancelOrder(menuItemDiv, item.title);
+        });
+        menuItemDiv.appendChild(cancelOrderButton);
+
+        const commentsSection = document.createElement("div");
+        commentsSection.classList.add("comments");
+        menuItemDiv.appendChild(commentsSection);
 
     }
 
