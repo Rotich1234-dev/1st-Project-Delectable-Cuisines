@@ -11,7 +11,7 @@ c. Like menu items
 d. Comment on the menu item
 e. Be able to cancel an order
 
-
+This site is live at https://rotich1234-dev.github.io/1st-Project-Delectable-Cuisines/
 
 ## Technology implemented
 - HTML
@@ -72,4 +72,11 @@ Promise.all([fetch(apiUrl1), fetch(apiUrl2)])
 
 ## Author:
 Rotich Jane 
+
 jeanetterotich@gmail.com
+
+
+You can view the project on browser through this link
+```bash
+ https://rotich1234-dev.github.io/1st-Project-Delectable-Cuisines/
+```
